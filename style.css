@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.choice {
+    height: 162px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#comp-score,
+#user-score {
+    font-size: 4rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+
+#msg {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Game Over */
+.game-over-container {
+    display: none;
+    margin-top: 3rem;
+}
+
+.game-over-container h2 {
+    font-size: 4rem;
+    color: #081b31;
+    margin-bottom: 1rem;
+}
+
+#new-game-btn {
+    background-color: #081b31;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#new-game-btn:hover {
+    background-color: green;
+}
+
+
+/* =========================
+   USER CHOICE - GREEN GLOW
+   ========================= */
+
+.user-choice {
+    animation: userGlow 0.8s ease-in-out;
+}
+
+@keyframes userGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 green;
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow:
+            0 0 20px green,
+            0 0 40px green,
+            0 0 60px green;
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 green;
+    }
+}
+
+
+/* =========================
+   COMPUTER CHOICE - RED GLOW
+   ========================= */
+
+.computer-choice {
+    animation: computerGlow 0.8s ease-in-out;
+}
+
+@keyframes computerGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 red;
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow:
+            0 0 20px red,
+            0 0 40px red,
+            0 0 60px red;
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 red;
+    }
+}
